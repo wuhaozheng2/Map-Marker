@@ -40,7 +40,7 @@ class ViewController: UIViewController,MAMapViewDelegate {
         mapView!.compassOrigin = CGPoint(x: compx, y: compy)
         mapView!.scaleOrigin = CGPoint(x: scalex, y: scaley)
         
-
+        //是否开启路况显示
         mapView!.isShowTraffic = false
         mapView!.isShowsUserLocation = true
         mapView!.userTrackingMode = MAUserTrackingMode.follow
@@ -49,7 +49,7 @@ class ViewController: UIViewController,MAMapViewDelegate {
         
         mapView!.delegate=self
         
-        //是否开启路况显示
+
 
         self.view.addSubview(mapView!)
     }
