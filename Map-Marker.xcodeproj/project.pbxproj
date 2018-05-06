@@ -12,9 +12,6 @@
 		76117CBE209CAD2E009BFC0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76117CBC209CAD2E009BFC0F /* Main.storyboard */; };
 		76117CC0209CAD2F009BFC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76117CBF209CAD2F009BFC0F /* Assets.xcassets */; };
 		76117CC3209CAD2F009BFC0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76117CC1209CAD2F009BFC0F /* LaunchScreen.storyboard */; };
-		76117CD6209CB5B1009BFC0F /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CD5209CB5B1009BFC0F /* AMapFoundationKit.framework */; };
-		76117CD8209CB5BB009BFC0F /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CD7209CB5BB009BFC0F /* AMapSearchKit.framework */; };
-		76117CDA209CB5C1009BFC0F /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CD9209CB5C0009BFC0F /* MAMapKit.framework */; };
 		76117CDD209CB8E8009BFC0F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CDB209CB8E8009BFC0F /* SystemConfiguration.framework */; };
 		76117CDE209CB8E8009BFC0F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CDC209CB8E8009BFC0F /* Security.framework */; };
 		76117CE2209CB904009BFC0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CDF209CB904009BFC0F /* UIKit.framework */; };
@@ -28,7 +25,17 @@
 		76117CF0209CB96F009BFC0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CEF209CB96E009BFC0F /* CoreGraphics.framework */; };
 		76117CF2209CB9CA009BFC0F /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CF1209CB9CA009BFC0F /* JavaScriptCore.framework */; };
 		76117CF4209CB9D9009BFC0F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CF3209CB9D9009BFC0F /* libc++.tbd */; };
-		76B46706209D8D3B002AF31C /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76B46705209D8D3B002AF31C /* AMap.bundle */; };
+		76E7F4DF209E06C40006CD12 /* MarkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7F4DE209E06C40006CD12 /* MarkListTableViewController.swift */; };
+		76E7F4FB209E13140006CD12 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E7F4F8209E13140006CD12 /* AMapFoundationKit.framework */; };
+		76E7F4FC209E13140006CD12 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E7F4F9209E13140006CD12 /* MAMapKit.framework */; };
+		76E7F4FD209E13140006CD12 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E7F4FA209E13140006CD12 /* AMapSearchKit.framework */; };
+		76E7F500209E13760006CD12 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76E7F4FF209E13760006CD12 /* AMap.bundle */; };
+		76E7F50A209E18C90006CD12 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7F503209E18C70006CD12 /* FloatyDelegate.swift */; };
+		76E7F50B209E18C90006CD12 /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7F504209E18C70006CD12 /* FloatyManager.swift */; };
+		76E7F50C209E18C90006CD12 /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7F506209E18C80006CD12 /* Floaty.swift */; };
+		76E7F50D209E18C90006CD12 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7F507209E18C80006CD12 /* FloatyItem.swift */; };
+		76E7F50E209E18C90006CD12 /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7F508209E18C80006CD12 /* FloatyWindow.swift */; };
+		76E7F50F209E18C90006CD12 /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7F509209E18C90006CD12 /* FloatyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +47,6 @@
 		76117CC2209CAD2F009BFC0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76117CC4209CAD2F009BFC0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76117CCA209CAF43009BFC0F /* Map-marker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Map-marker-Bridging-Header.h"; sourceTree = "<group>"; };
-		76117CD5209CB5B1009BFC0F /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
-		76117CD7209CB5BB009BFC0F /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
-		76117CD9209CB5C0009BFC0F /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		76117CDB209CB8E8009BFC0F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		76117CDC209CB8E8009BFC0F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		76117CDF209CB904009BFC0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -56,7 +60,22 @@
 		76117CEF209CB96E009BFC0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		76117CF1209CB9CA009BFC0F /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		76117CF3209CB9D9009BFC0F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		76B46705209D8D3B002AF31C /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Resources/AMap.bundle; sourceTree = "<group>"; };
+		76E7F4DE209E06C40006CD12 /* MarkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkListTableViewController.swift; sourceTree = "<group>"; };
+		76E7F4F2209E12D00006CD12 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = "../../../../Users/wuhaozheng/Downloads/AMap_iOS_Demo/MAMapKit_2D_Demo-1/Frameworks/AMapSearchKit.framework"; sourceTree = "<group>"; };
+		76E7F4F3209E12D00006CD12 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapFoundationKit.framework; path = "../../../../Users/wuhaozheng/Downloads/AMap_iOS_Demo/MAMapKit_2D_Demo-1/Frameworks/AMapFoundationKit.framework"; sourceTree = "<group>"; };
+		76E7F4F4209E12D00006CD12 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = "../../../../Users/wuhaozheng/Downloads/AMap_iOS_Demo/MAMapKit_2D_Demo-1/Frameworks/MAMapKit.framework"; sourceTree = "<group>"; };
+		76E7F4F8209E13140006CD12 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapFoundationKit.framework; path = Frameworks/AMapFoundationKit.framework; sourceTree = "<group>"; };
+		76E7F4F9209E13140006CD12 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = Frameworks/MAMapKit.framework; sourceTree = "<group>"; };
+		76E7F4FA209E13140006CD12 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = Frameworks/AMapSearchKit.framework; sourceTree = "<group>"; };
+		76E7F4FF209E13760006CD12 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Frameworks/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
+		76E7F501209E186F0006CD12 /* Floaty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Floaty.framework; path = Frameworks/Floaty.framework; sourceTree = "<group>"; };
+		76E7F503209E18C70006CD12 /* FloatyDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyDelegate.swift; sourceTree = "<group>"; };
+		76E7F504209E18C70006CD12 /* FloatyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyManager.swift; sourceTree = "<group>"; };
+		76E7F505209E18C80006CD12 /* Floaty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floaty.h; sourceTree = "<group>"; };
+		76E7F506209E18C80006CD12 /* Floaty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floaty.swift; sourceTree = "<group>"; };
+		76E7F507209E18C80006CD12 /* FloatyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyItem.swift; sourceTree = "<group>"; };
+		76E7F508209E18C80006CD12 /* FloatyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyWindow.swift; sourceTree = "<group>"; };
+		76E7F509209E18C90006CD12 /* FloatyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E7F4FB209E13140006CD12 /* AMapFoundationKit.framework in Frameworks */,
+				76E7F4FC209E13140006CD12 /* MAMapKit.framework in Frameworks */,
+				76E7F4FD209E13140006CD12 /* AMapSearchKit.framework in Frameworks */,
 				76117CF4209CB9D9009BFC0F /* libc++.tbd in Frameworks */,
 				76117CF2209CB9CA009BFC0F /* JavaScriptCore.framework in Frameworks */,
 				76117CF0209CB96F009BFC0F /* CoreGraphics.framework in Frameworks */,
@@ -77,9 +99,6 @@
 				76117CE4209CB904009BFC0F /* QuartzCore.framework in Frameworks */,
 				76117CDD209CB8E8009BFC0F /* SystemConfiguration.framework in Frameworks */,
 				76117CDE209CB8E8009BFC0F /* Security.framework in Frameworks */,
-				76117CDA209CB5C1009BFC0F /* MAMapKit.framework in Frameworks */,
-				76117CD8209CB5BB009BFC0F /* AMapSearchKit.framework in Frameworks */,
-				76117CD6209CB5B1009BFC0F /* AMapFoundationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +108,7 @@
 		76117CAC209CAD2D009BFC0F = {
 			isa = PBXGroup;
 			children = (
-				76B46705209D8D3B002AF31C /* AMap.bundle */,
-				76117CCA209CAF43009BFC0F /* Map-marker-Bridging-Header.h */,
+				76E7F4FF209E13760006CD12 /* AMap.bundle */,
 				76117CB7209CAD2D009BFC0F /* Map-Marker */,
 				76117CB6209CAD2D009BFC0F /* Products */,
 				76117CCB209CAF62009BFC0F /* Frameworks */,
@@ -108,12 +126,21 @@
 		76117CB7209CAD2D009BFC0F /* Map-Marker */ = {
 			isa = PBXGroup;
 			children = (
+				76E7F505209E18C80006CD12 /* Floaty.h */,
+				76E7F506209E18C80006CD12 /* Floaty.swift */,
+				76E7F503209E18C70006CD12 /* FloatyDelegate.swift */,
+				76E7F507209E18C80006CD12 /* FloatyItem.swift */,
+				76E7F504209E18C70006CD12 /* FloatyManager.swift */,
+				76E7F509209E18C90006CD12 /* FloatyViewController.swift */,
+				76E7F508209E18C80006CD12 /* FloatyWindow.swift */,
+				76117CCA209CAF43009BFC0F /* Map-marker-Bridging-Header.h */,
 				76117CB8209CAD2E009BFC0F /* AppDelegate.swift */,
 				76117CBA209CAD2E009BFC0F /* ViewController.swift */,
 				76117CBC209CAD2E009BFC0F /* Main.storyboard */,
 				76117CBF209CAD2F009BFC0F /* Assets.xcassets */,
 				76117CC1209CAD2F009BFC0F /* LaunchScreen.storyboard */,
 				76117CC4209CAD2F009BFC0F /* Info.plist */,
+				76E7F4DE209E06C40006CD12 /* MarkListTableViewController.swift */,
 			);
 			path = "Map-Marker";
 			sourceTree = "<group>";
@@ -121,6 +148,13 @@
 		76117CCB209CAF62009BFC0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76E7F501209E186F0006CD12 /* Floaty.framework */,
+				76E7F4F3209E12D00006CD12 /* AMapFoundationKit.framework */,
+				76E7F4F2209E12D00006CD12 /* AMapSearchKit.framework */,
+				76E7F4FA209E13140006CD12 /* AMapSearchKit.framework */,
+				76E7F4F4209E12D00006CD12 /* MAMapKit.framework */,
+				76E7F4F8209E13140006CD12 /* AMapFoundationKit.framework */,
+				76E7F4F9209E13140006CD12 /* MAMapKit.framework */,
 				76117CF3209CB9D9009BFC0F /* libc++.tbd */,
 				76117CF1209CB9CA009BFC0F /* JavaScriptCore.framework */,
 				76117CEF209CB96E009BFC0F /* CoreGraphics.framework */,
@@ -134,9 +168,6 @@
 				76117CDF209CB904009BFC0F /* UIKit.framework */,
 				76117CDC209CB8E8009BFC0F /* Security.framework */,
 				76117CDB209CB8E8009BFC0F /* SystemConfiguration.framework */,
-				76117CD5209CB5B1009BFC0F /* AMapFoundationKit.framework */,
-				76117CD7209CB5BB009BFC0F /* AMapSearchKit.framework */,
-				76117CD9209CB5C0009BFC0F /* MAMapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,7 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B46706209D8D3B002AF31C /* AMap.bundle in Resources */,
+				76E7F500209E13760006CD12 /* AMap.bundle in Resources */,
 				76117CC3209CAD2F009BFC0F /* LaunchScreen.storyboard in Resources */,
 				76117CC0209CAD2F009BFC0F /* Assets.xcassets in Resources */,
 				76117CBE209CAD2E009BFC0F /* Main.storyboard in Resources */,
@@ -213,8 +244,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E7F50C209E18C90006CD12 /* Floaty.swift in Sources */,
+				76E7F50B209E18C90006CD12 /* FloatyManager.swift in Sources */,
+				76E7F50F209E18C90006CD12 /* FloatyViewController.swift in Sources */,
+				76E7F4DF209E06C40006CD12 /* MarkListTableViewController.swift in Sources */,
+				76E7F50A209E18C90006CD12 /* FloatyDelegate.swift in Sources */,
+				76E7F50E209E18C90006CD12 /* FloatyWindow.swift in Sources */,
 				76117CBB209CAD2E009BFC0F /* ViewController.swift in Sources */,
 				76117CB9209CAD2E009BFC0F /* AppDelegate.swift in Sources */,
+				76E7F50D209E18C90006CD12 /* FloatyItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +334,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/MAC_DATA/Xcode_Projects/Map-Marker/Map-marker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/MAC_DATA/Xcode_Projects/Map-Marker/Map-Marker/Map-marker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
@@ -351,7 +389,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/MAC_DATA/Xcode_Projects/Map-Marker/Map-marker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/MAC_DATA/Xcode_Projects/Map-Marker/Map-Marker/Map-marker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				VALIDATE_PRODUCT = YES;
@@ -368,6 +406,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "Map-Marker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
@@ -377,7 +416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Vmeng.Map-Marker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/MAC_DATA/Xcode_Projects/Map-Marker/Map-marker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/MAC_DATA/Xcode_Projects/Map-Marker/Map-Marker/Map-marker-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -394,6 +433,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "Map-Marker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
@@ -403,7 +443,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Vmeng.Map-Marker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/MAC_DATA/Xcode_Projects/Map-Marker/Map-marker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/MAC_DATA/Xcode_Projects/Map-Marker/Map-Marker/Map-marker-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";

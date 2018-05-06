@@ -11,7 +11,9 @@ let APIKey="b4383807b216ff5f8bb621eb83742507"
 
 
 
+
 class ViewController: UIViewController,MAMapViewDelegate {
+
     var mapView:MAMapView?
     var annotations: Array<MAPointAnnotation>!
     var geodesicCoords=[CLLocationCoordinate2D]()
@@ -24,12 +26,23 @@ class ViewController: UIViewController,MAMapViewDelegate {
         AMapServices.shared().apiKey = APIKey
         initMapView()
         initAnnotations()
-        mapView!.setCenter(mapView!.userLocation.coordinate, animated: true)
+        let floaty = Floaty()
+        floaty.addItem(title:"I got a handler", handler: { item in
+            let markListTableViewController=MarkListTableViewController()
+            self.present(markListTableViewController, animated: true, completion: nil)
+
+        })
+        self.view.addSubview(floaty)
+        self.view.addSubview(floaty)
+
 
         
 
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+
+    
     func initMapView(){
         AMapServices.shared().enableHTTPS = true
         mapView=MAMapView(frame:self.view.bounds)
