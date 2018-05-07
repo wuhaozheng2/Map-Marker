@@ -8,6 +8,7 @@
 
 import UIKit
 let APIKey="b4383807b216ff5f8bb621eb83742507"
+let filePath:String = NSHomeDirectory() + "/Documents/data.plist"
 
 
 
@@ -18,6 +19,9 @@ class ViewController: UIViewController,MAMapViewDelegate {
     var annotations: Array<MAPointAnnotation>!
     var geodesicCoords=[CLLocationCoordinate2D]()
     var selectedLocation:CLLocationCoordinate2D?
+    let fileManager = FileManager()
+    var dataArray=Array<Array<Dictionary<Any, Any>>>()
+    
     
     
 
@@ -25,6 +29,7 @@ class ViewController: UIViewController,MAMapViewDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
         AMapServices.shared().apiKey = APIKey
+        initDataFile()
         initMapView()
         initAnnotations()
         
@@ -72,11 +77,25 @@ class ViewController: UIViewController,MAMapViewDelegate {
     
     
     func initAnnotations() {
-        let pointAnnotation = MAPointAnnotation()
-        pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792)
-        pointAnnotation.title = "方恒国际"
-        pointAnnotation.subtitle = "阜通东大街6号"
-        mapView!.addAnnotation(pointAnnotation)
+        if fileManager.fileExists(atPath: filePath)==true {
+            dataArray! = NSArray(contentsOfFile: filePath)!
+        }
+//        var pointAnnotation=[Any]()
+        dataArray!=[[1:CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792),2:"first test",3:"first sub"],[1:CLLocationCoordinate2D(latitude: 40.979590, longitude: 116.352792),2:"second test",3:"second sub"]]
+        var i=0
+        for n in dataArray! {
+            
+//            pointAnnotation[i]=n
+            n[1]
+            i=i+1
+            
+        }
+
+//        let pointAnnotation = MAPointAnnotation()
+//        pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792)
+//        pointAnnotation.title = "方恒国际"
+//        pointAnnotation.subtitle = "阜通东大街6号"
+//        mapView!.addAnnotation(pointAnnotation)
         
         
     }
@@ -101,11 +120,20 @@ class ViewController: UIViewController,MAMapViewDelegate {
 
     }
     
+    func initDataFile() {
+        var exist = fileManager.fileExists(atPath: filePath)
+        if exist == false {
+            fileManager.createFile(atPath: filePath, contents: nil, attributes: nil)
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
 
     }
+    
+    
     
     
     

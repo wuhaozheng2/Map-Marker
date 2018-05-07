@@ -38,7 +38,7 @@ class AskLocationInfoView: UIViewController {
         let filePath:String = NSHomeDirectory() + "/Documents/data.plist"
         let NSarrayFromPlist:NSArray? = NSArray(contentsOfFile: filePath)
         var arrayFromPlist:[String] = NSarrayFromPlist as! [String]
-        arrayFromPlist.append=[selectedLocation:CLLocationCoordinate2D,textFieldMain?.text:String,textFieldSub?.text:String]
+
     }
 
     override func didReceiveMemoryWarning() {
