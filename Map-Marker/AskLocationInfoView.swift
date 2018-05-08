@@ -34,10 +34,17 @@ class AskLocationInfoView: UIViewController {
     }
     
     @objc func tapped(){
-        self.dismiss(animated: true, completion: nil)
+
         let filePath:String = NSHomeDirectory() + "/Documents/data.plist"
-        let NSarrayFromPlist:NSArray? = NSArray(contentsOfFile: filePath)
-        var arrayFromPlist:[String] = NSarrayFromPlist as! [String]
+        let NSarrayFromPlist:NSArray  = NSArray(contentsOfFile: filePath)!
+//        var arrayFromPlist:[String] = NSarrayFromPlist as! [String]
+        let addedMark:Dictionary=["locationLatitude":Double(selectedLocation!.latitude),"locationLongitude":Double(selectedLocation!.longitude),"main":textFieldMain?.text ?? "未描述","sub":textFieldSub?.text ?? "未描述"] as [String : Any]
+//        (NSarrayFromPlist as! Array<Dictionary<String, Any>>).append(contentsOf: addedMark)
+        let dataArray:Array=NSarrayFromPlist.adding(addedMark)
+        NSArray(array: dataArray).write(toFile: filePath, atomically: true)
+        
+        
+        self.dismiss(animated: true, completion:nil)
 
     }
 

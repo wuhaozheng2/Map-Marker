@@ -16,7 +16,7 @@ class TableView: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let NSarrayFromPlist:NSArray  = NSArray(contentsOfFile: filePath)!
 
             dataArray=["1"]
             dataSubArray=["2"]

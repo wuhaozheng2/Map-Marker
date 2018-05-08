@@ -27,7 +27,6 @@
 		76117CF4209CB9D9009BFC0F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76117CF3209CB9D9009BFC0F /* libc++.tbd */; };
 		7659534C209EDF0F004CD228 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659534B209EDF0F004CD228 /* TableView.swift */; };
 		7659535A209F5EC9004CD228 /* AskLocationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76595359209F5EC9004CD228 /* AskLocationInfoView.swift */; };
-		76E7F4DF209E06C40006CD12 /* MarkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7F4DE209E06C40006CD12 /* MarkListTableViewController.swift */; };
 		76E7F4FB209E13140006CD12 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E7F4F8209E13140006CD12 /* AMapFoundationKit.framework */; };
 		76E7F4FC209E13140006CD12 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E7F4F9209E13140006CD12 /* MAMapKit.framework */; };
 		76E7F4FD209E13140006CD12 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E7F4FA209E13140006CD12 /* AMapSearchKit.framework */; };
@@ -64,7 +63,6 @@
 		76117CF3209CB9D9009BFC0F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		7659534B209EDF0F004CD228 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		76595359209F5EC9004CD228 /* AskLocationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskLocationInfoView.swift; sourceTree = "<group>"; };
-		76E7F4DE209E06C40006CD12 /* MarkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkListTableViewController.swift; sourceTree = "<group>"; };
 		76E7F4F8209E13140006CD12 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapFoundationKit.framework; path = Frameworks/AMapFoundationKit.framework; sourceTree = "<group>"; };
 		76E7F4F9209E13140006CD12 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = Frameworks/MAMapKit.framework; sourceTree = "<group>"; };
 		76E7F4FA209E13140006CD12 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = Frameworks/AMapSearchKit.framework; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				76117CBF209CAD2F009BFC0F /* Assets.xcassets */,
 				76117CC1209CAD2F009BFC0F /* LaunchScreen.storyboard */,
 				76117CC4209CAD2F009BFC0F /* Info.plist */,
-				76E7F4DE209E06C40006CD12 /* MarkListTableViewController.swift */,
 				7659534B209EDF0F004CD228 /* TableView.swift */,
 				76595359209F5EC9004CD228 /* AskLocationInfoView.swift */,
 			);
@@ -248,7 +245,6 @@
 				7659534C209EDF0F004CD228 /* TableView.swift in Sources */,
 				76E7F50B209E18C90006CD12 /* FloatyManager.swift in Sources */,
 				76E7F50F209E18C90006CD12 /* FloatyViewController.swift in Sources */,
-				76E7F4DF209E06C40006CD12 /* MarkListTableViewController.swift in Sources */,
 				76E7F50A209E18C90006CD12 /* FloatyDelegate.swift in Sources */,
 				76E7F50E209E18C90006CD12 /* FloatyWindow.swift in Sources */,
 				7659535A209F5EC9004CD228 /* AskLocationInfoView.swift in Sources */,

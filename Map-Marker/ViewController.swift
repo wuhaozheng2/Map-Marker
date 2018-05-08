@@ -43,6 +43,9 @@ class ViewController: UIViewController,MAMapViewDelegate {
         floaty.addItem(title:"Mark选中地点", handler: { item in
                 self.alertForLocatinInfo(selectedLocation:self.selectedLocation!)
         })
+        floaty.addItem(title:"刷新地图", handler: { item in
+            self.initAnnotations()
+        })
         self.view.addSubview(floaty)
 
 
@@ -79,11 +82,12 @@ class ViewController: UIViewController,MAMapViewDelegate {
     
     
     func initAnnotations() {
+        mapView?.removeAnnotations(annotations)
 //        if fileManager.fileExists(atPath: filePath)==true {
 //            dataArray = NSArray(contentsOfFile: filePath)! as! [(CLLocationCoordinate2D,String,String)]
 //        }
         annotations = Array()
-        var pointAnnotation=[Any]()
+//        var pointAnnotation=[Any]()
         let dataArray=NSArray(contentsOfFile: filePath)
 //        dataArray=[(CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792),"first test","first sub"),(CLLocationCoordinate2D(latitude: 40.979590, longitude: 116.352792),"second test","second sub")]
 //        dataArray=[["locationLatitude":39.979590,"locationLongitude":116.352792,"main":"first test","sub":"first sub"],["locationLatitude":40.979590,"locationLongitude":116.352792,"main":"second test","sub":"second sub"]]
@@ -121,6 +125,7 @@ class ViewController: UIViewController,MAMapViewDelegate {
         let askLocationInfoView=AskLocationInfoView()
         askLocationInfoView.selectedLocation=selectedLocation
         self.present(askLocationInfoView,animated: true,completion: nil)
+        
     }
     
     //收藏已选中地点
@@ -146,8 +151,9 @@ class ViewController: UIViewController,MAMapViewDelegate {
 //            let dataArray=[(CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792),"first test","first sub"),(CLLocationCoordinate2D(latitude: 40.979590, longitude: 116.352792),"second test","second sub")]
 //            print(dataArray)
             NSArray(array: dataArray).write(toFile: filePath, atomically: true)
-            let array = NSArray(contentsOfFile: filePath)
-            print(array)
+//            let array = NSArray(contentsOfFile: filePath)
+//            print(array)
+            
 
 
 //            NSKeyedArchiver.archiveRootObject(dataArray, toFile: filePath)
@@ -156,6 +162,10 @@ class ViewController: UIViewController,MAMapViewDelegate {
             
         }
     }
+    
+    
+    
+
     
     
     override func viewDidAppear(_ animated: Bool) {
