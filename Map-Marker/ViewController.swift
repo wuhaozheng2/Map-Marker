@@ -33,7 +33,7 @@ class ViewController: UIViewController,MAMapViewDelegate {
         AMapServices.shared().apiKey = APIKey
         initDataFile()
         initMapView()
-//        initAnnotations()
+        initAnnotations()
         
         //显示右下角加号按钮
         let floaty = Floaty()
@@ -84,15 +84,20 @@ class ViewController: UIViewController,MAMapViewDelegate {
 //        }
         annotations = Array()
         var pointAnnotation=[Any]()
-//        let dataArray=NSKeyedUnarchiver.unarchiveObject(withFile: filePath)
         let dataArray=NSArray(contentsOfFile: filePath)
 //        dataArray=[(CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792),"first test","first sub"),(CLLocationCoordinate2D(latitude: 40.979590, longitude: 116.352792),"second test","second sub")]
+//        dataArray=[["locationLatitude":39.979590,"locationLongitude":116.352792,"main":"first test","sub":"first sub"],["locationLatitude":40.979590,"locationLongitude":116.352792,"main":"second test","sub":"second sub"]]
         var i=0
         for n in dataArray! {
             let anno=MAPointAnnotation()
-            anno.coordinate=(n as! (CLLocationCoordinate2D,String,String)).0
-            anno.title=(n as! (CLLocationCoordinate2D,String,String)).1
-            anno.subtitle=(n as! (CLLocationCoordinate2D,String,String)).2
+//            anno.coordinate.latitude=n["locationLatitude"] as! CLLocationDegrees
+//            anno.coordinate.longitude=n["locationLongitude"] as! CLLocationDegrees
+//            anno.title=n["main"] as! String
+//            anno.subtitle=n["sub"] as! String
+            anno.coordinate.latitude=(n as! Dictionary<String, Any>)["locationLatitude"] as! CLLocationDegrees
+            anno.coordinate.longitude=(n as! Dictionary<String, Any>)["locationLongitude"] as! CLLocationDegrees
+            anno.title=(n as! Dictionary<String, Any>)["main"] as! String
+            anno.subtitle=(n as! Dictionary<String, Any>)["sub"] as! String
             annotations.append(anno)
             i=i+1
             
@@ -136,12 +141,13 @@ class ViewController: UIViewController,MAMapViewDelegate {
         if exist == false {
 
 //            var dataArray=Array<Dictionary<Int, Any>>()
+
              dataArray=[["locationLatitude":39.979590,"locationLongitude":116.352792,"main":"first test","sub":"first sub"],["locationLatitude":40.979590,"locationLongitude":116.352792,"main":"second test","sub":"second sub"]]
 //            let dataArray=[(CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792),"first test","first sub"),(CLLocationCoordinate2D(latitude: 40.979590, longitude: 116.352792),"second test","second sub")]
-
+//            print(dataArray)
             NSArray(array: dataArray).write(toFile: filePath, atomically: true)
-            let tfArray = NSArray(contentsOfFile: filePath)
-            print(tfArray)
+            let array = NSArray(contentsOfFile: filePath)
+            print(array)
 
 
 //            NSKeyedArchiver.archiveRootObject(dataArray, toFile: filePath)
