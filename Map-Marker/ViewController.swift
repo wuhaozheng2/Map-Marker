@@ -20,7 +20,8 @@ class ViewController: UIViewController,MAMapViewDelegate {
     var geodesicCoords=[CLLocationCoordinate2D]()
     var selectedLocation:CLLocationCoordinate2D?
     let fileManager = FileManager()
-    var dataArray=Array<Array<Dictionary<Any, Any>>>()
+//    var dataArray=[[Int:Any]]()
+    var dataArray=[(CLLocationCoordinate2D,String,String)]()
     
     
     
@@ -77,19 +78,28 @@ class ViewController: UIViewController,MAMapViewDelegate {
     
     
     func initAnnotations() {
-        if fileManager.fileExists(atPath: filePath)==true {
-            dataArray! = NSArray(contentsOfFile: filePath)!
-        }
-//        var pointAnnotation=[Any]()
-        dataArray!=[[1:CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792),2:"first test",3:"first sub"],[1:CLLocationCoordinate2D(latitude: 40.979590, longitude: 116.352792),2:"second test",3:"second sub"]]
+//        if fileManager.fileExists(atPath: filePath)==true {
+//            dataArray = NSArray(contentsOfFile: filePath)! as! [(CLLocationCoordinate2D,String,String)]
+//        }
+        annotations = Array()
+        var pointAnnotation=[Any]()
+//        let dataArray=NSKeyedUnarchiver.unarchiveObject(withFile: filePath)
+            let dataArray=NSArray(contentsOfFile: filePath)
+//        dataArray=[(CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792),"first test","first sub"),(CLLocationCoordinate2D(latitude: 40.979590, longitude: 116.352792),"second test","second sub")]
         var i=0
         for n in dataArray! {
-            
-//            pointAnnotation[i]=n
-            n[1]
+            let anno=MAPointAnnotation()
+            anno.coordinate=n.0
+            anno.title=n.1
+            anno.subtitle=n.2
+            annotations.append(anno)
             i=i+1
             
         }
+        for i in annotations {
+            mapView!.addAnnotation(i)
+        }
+
 
 //        let pointAnnotation = MAPointAnnotation()
 //        pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792)
@@ -121,11 +131,14 @@ class ViewController: UIViewController,MAMapViewDelegate {
     }
     
     func initDataFile() {
-        var exist = fileManager.fileExists(atPath: filePath)
+        let exist = fileManager.fileExists(atPath: filePath)
         if exist == false {
-            fileManager.createFile(atPath: filePath, contents: nil, attributes: nil)
+            let dataArray=[(CLLocationCoordinate2D(latitude: 39.979590, longitude: 116.352792),"first test","first sub"),(CLLocationCoordinate2D(latitude: 40.979590, longitude: 116.352792),"second test","second sub")]
+            NSKeyedArchiver.archiveRootObject(dataArray, toFile: filePath)
+  //          fileManager.createFile(atPath: filePath, contents: Data?, attributes: nil)
         }
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -153,6 +166,7 @@ class ViewController: UIViewController,MAMapViewDelegate {
             annotationView!.isDraggable = true
             annotationView!.rightCalloutAccessoryView = UIButton(type: UIButtonType.detailDisclosure)
             annotationView!.pinColor = MAPinAnnotationColor(rawValue: 1)!
+            
             
             return annotationView!
         }
