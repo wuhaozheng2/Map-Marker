@@ -9,17 +9,23 @@
 import UIKit
 
 class TableView: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    var dataArray:Array<String>?
+    var dataMainArray:Array<String>?
     var dataSubArray:Array<String>?
     var locationArray:Array<CLLocationCoordinate2D>?
     var myCellID="TableViewCellId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let NSarrayFromPlist:NSArray  = NSArray(contentsOfFile: filePath)!
+        let nSarrayFromPlist:NSArray  = NSArray(contentsOfFile: filePath)!
+        print(nSarrayFromPlist)
+        dataMainArray=[]
+        dataSubArray=[]
+        for n in nSarrayFromPlist {
+            dataMainArray?.append((n as! Dictionary<String, Any>)["main"] as! String)
+            dataSubArray?.append((n as! Dictionary<String, Any>)["sub"] as! String)
+        }
 
-            dataArray=["1"]
-            dataSubArray=["2"]
+
        
 
         
@@ -40,14 +46,14 @@ class TableView: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray!.count
+        return dataMainArray!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell=tableView.dequeueReusableCell(withIdentifier: myCellID,for:indexPath)
         let cell=UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: myCellID)
 
-        cell.textLabel?.text=dataArray?[indexPath.row]
+        cell.textLabel?.text=dataMainArray?[indexPath.row]
         cell.detailTextLabel?.text=dataSubArray?[indexPath.row]
 
         return cell
