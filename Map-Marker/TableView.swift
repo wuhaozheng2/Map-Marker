@@ -13,10 +13,11 @@ class TableView: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var dataSubArray:Array<String>?
     var locationArray:Array<CLLocationCoordinate2D>?
     var myCellID="TableViewCellId"
+    let nSarrayFromPlist:NSArray  = NSArray(contentsOfFile: filePath)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nSarrayFromPlist:NSArray  = NSArray(contentsOfFile: filePath)!
+
         print(nSarrayFromPlist)
         dataMainArray=[]
         dataSubArray=[]
@@ -57,6 +58,10 @@ class TableView: UIViewController,UITableViewDelegate,UITableViewDataSource {
         cell.detailTextLabel?.text=dataSubArray?[indexPath.row]
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(nSarrayFromPlist[indexPath.row])")
     }
     
     
